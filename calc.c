@@ -59,13 +59,14 @@ int main() {
                 break;
 
             case '/':
+                
                 // Antes de dividir, verificar se o segundo numero nao e zero
-
                 if (num2 != 0) {
                     printf("Resultado: %.2f\n", num1 / num2);
+                
                 // Se for 0, dar erro
-
-                } else {
+                }
+                else {
                     printf("Erro: nao e possivel dividir por zero.\n");
                 }
                 break;
