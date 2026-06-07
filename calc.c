@@ -28,12 +28,12 @@ int main() {
             printf("Introduza a operacao (+, -, *, /): ");
             scanf(" %c", &calc);
 
-            // Verificar se a operacao e invalida. "se calc diferente de"
+            // Verificar se a operacao e invalida. "se calc for diferente de"
+            // Enquanto o utilizador nao inserir +, -, * ou /, o programa volta a pedir
 
             if (calc != '+' && calc != '-' && calc != '*' && calc != '/') {
                 printf("Operacao invalida. Tente novamente.\n");
             }
-        // Enquanto o utilizador nao inserir +, -, * ou /, o programa volta a pedir
 
         } while (calc != '+' && calc != '-' && calc != '*' && calc != '/');
 
