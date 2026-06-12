@@ -47,7 +47,7 @@ int main() {
 
     //Tell the user the detailed report
 
-    printf("This week's average temperature was %.1f. The highest temperature was %.1f and it was recorded on day %i", average, highest, day+1);
+    printf("This week's average temperature was %.2f. The highest temperature was %.2f and it was recorded on day %i", average, highest, day+1);
 
     return 0;
         

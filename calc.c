@@ -79,6 +79,7 @@ int main() {
 
     } while (continuar == 's');
 
+
     // Se nao, terminar programa
 
     printf("Programa terminado.\n");
