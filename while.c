@@ -5,11 +5,11 @@
 int main() {
 
 int n;
-int i=0;
-int soma=0;
+int soma;
 
-    printf("Digite os numeros, para terminar insira 0: \n");
+    printf("Digite os numeros, para terminar insira 0: ");
     scanf("%d", &n);
+    soma = n;
 
         while(n != 0){
             printf("Introduza o proximo numero: ");
@@ -17,7 +17,7 @@ int soma=0;
             soma = soma + n;
         }
 
-    printf("Os numeros inseridos foram: ");
+    printf("A soma dos numeros inseridos e: ");
     printf("%d\n", soma);
 
 return 0;
