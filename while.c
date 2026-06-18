@@ -7,7 +7,7 @@ int main() {
 int n;
 int soma;
 
-    printf("Digite os numeros, para terminar insira 0: ");
+    printf("Digite os numeros, para terminar insira 0.\nDigite o primeiro numero: ");
     scanf("%d", &n);
     soma = n;
 
