@@ -132,13 +132,14 @@ int main(){
     int vetor6[10], num, posi=0;
     bool flag = false;
 
-    printf("Parte 6 - Pesquisa de um numero. \n\n");
+printf("Parte 6 - Pesquisa de um numero. \n\n");
 
     for(int i=0;i<10;i++){
         printf("Insira os numeros: \n");
         scanf("%d" , &vetor6[i]);
     }
 
+    do{
     printf("\nDigite o numero que procura: \n");
     scanf("%d", &num);
 
@@ -149,10 +150,12 @@ int main(){
         }
     }
 
-    if(flag=false){
+    if(flag==false){
         printf("O numero nao foi encontrado.");
     }
-    if(flag=true){
+    }while(flag=1=false);
+
+    if(flag==true){
         printf("O numero %d, foi encontrado na posicao %d", num, (posi+1));
     }
 
