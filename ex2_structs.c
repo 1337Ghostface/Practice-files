@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int main(){
-
-    int n;
-
     struct Aluno{
         int idade;
         float nota;
     };
+    
+int main(){
+
+    int n;
 
     printf("Digite o numero de alunos: ");
     scanf("%d", &n);
