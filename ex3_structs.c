@@ -7,11 +7,11 @@ O programa deve:
 - calcular o valor total em stock.
 Fórmula: valorTotal = preco * quantidade;*/
 
-    struct Produto{
-        int codigo;
-        float preco;
-        int quantidade;
-    };
+struct Produto{
+    int codigo;
+    float preco;
+    int quantidade;
+};
 
 int main(){
 

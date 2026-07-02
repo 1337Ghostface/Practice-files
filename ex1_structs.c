@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int main (){
+struct pessoa {
+    int idade;
+    float altura;
+    int peso;
+};
 
-    struct pessoa {
-        int idade;
-        float altura;
-        int peso;
-    };
+int main (){
 
     struct pessoa p;
 

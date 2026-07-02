@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-    struct Aluno{
-        int idade;
-        float nota;
-    };
+struct Aluno{
+    int idade;
+    float nota;
+};
     
 int main(){
 
