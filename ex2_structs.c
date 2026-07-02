@@ -33,7 +33,7 @@ int main(){
             printf(" e passou com nota %.2f", a[i].nota);
         }
         else{
-            printf(" nao passou.");
+            printf(" e nao passou.");
         }
     }
     return 0;
