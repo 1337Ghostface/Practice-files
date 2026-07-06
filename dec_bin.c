@@ -5,7 +5,7 @@ int main() {
     int decimal;
     int valores[7] = {64, 32, 16, 8, 4, 2, 1}; //defino os valores do vetor baseado no metodo que uso
 
-    printf("Insere um numero decimal entre 0 e 127: "); //usando o vetor apenas ate 64, so permite que o maior numero inserido seja 127
+    printf("Insere um numero decimal entre 0 e 127: "); //usando o vetor apenas ate 64, so permite que o maior numero inserido seja 127 porque 64+64=128
 
     if (scanf("%d", &decimal){ //ler numero inserido.
         printf("Erro: tens de inserir um numero inteiro.\n"); //se o utilizador nao meter numero inteiro, da erro
