@@ -1,9 +1,9 @@
 #include<stdio.h>
-#include<stdbool.h>
+#include<stdbool.h> //adicionar esta linha se quiser usar boolean (true - false)
 
 int main(){
 
-    int opcao;
+    int opcao; //variavel para switch
 
     printf("Escolha o exercicio que quer fazer:\n");
     printf("1 - Leitura e apresentacao de valores\n");
@@ -14,7 +14,7 @@ int main(){
     printf("6 - Pesquisa de um numero\n");
     printf("7 - Inversao do vetor\n");
     printf("Opcao: ");
-    scanf("%d", &opcao);
+    scanf("%d", &opcao); //guardar o numero selecionado pelo utilizador para usar no switch case
 
     switch(opcao){
 
@@ -25,16 +25,16 @@ int main(){
 
             printf("Parte 1 -Leitura e apresentacao de valores. \n\n");
 
-            int vetor1[10];
+            int vetor1[10]; //Criar vetor para guardar os 10 valores
 
-            for(int i=0;i<10;i++){
+            for(int i=0;i<10;i++){ //"for" para ler e guardar os numeros inseridos no vetor
                 printf("Digite o numero %d:\n", (i+1));
                 scanf("%d", &vetor1[i]);
             }
 
-            printf("Os numeros inseridos foram: ");
+            printf("Os numeros inseridos foram: "); 
             
-            for(int i=0;i<10;i++){
+            for(int i=0;i<10;i++){ //"for" para mostrar os valores inseridos
                 printf("%d, ", vetor1[i]);
             }
 
@@ -52,10 +52,10 @@ int main(){
 
             int vetor2[8], soma=0;
 
-            for(int i=0;i<8;i++){
-                printf("Digite o numero %d:\n", (i+1));
+            for(int i=0;i<8;i++){ //"for" para ler e guardar os numeros inseridos no vetor
+                printf("Digite o numero %d:\n", (i+1)); //aqui meto (i+1) para mostrar a posiçao do vetor. Tem que se meter +1 para não mostrar ao usuario a primeira posição como 0
                 scanf("%d", &vetor2[i]);
-                soma += vetor2[i];
+                soma += vetor2[i]; //fazer a soma
             }
 
             printf("A soma de todos os valores e de: %d", soma);
@@ -75,28 +75,28 @@ int main(){
 
             int vetor3[10], valMaior, valMenor, posMaior=1, posMenor=1;
 
-            for(int i=0;i<10;i++){
+            for(int i=0;i<10;i++){ //"for" para ler e guardar os numeros inseridos no vetor
                 printf("Digite o numero %d:\n", (i+1));
                 scanf("%d", &vetor3[i]);
             }
 
-            valMenor = vetor3[0];
-            valMaior = vetor3[0];
+            valMenor = vetor3[0]; //definir o valor menor como o valor que está na posição 0
+            valMaior = vetor3[0]; //definir o valor maior como o valor que está na posição 0
 
-            for(int i=0;i<10;i++){
+            for(int i=0;i<10;i++){ //"for" para procurar o valor menor e maior
 
-                if(vetor3[i] < valMenor){
-                    valMenor = vetor3[i];
-                    posMenor = i+1;
+                if(vetor3[i] < valMenor){ //"if" o valor de vetor3 na posição i for menor que o valor guardado na variavel
+                    valMenor = vetor3[i]; //guardar o novo valor
+                    posMenor = i+1; //guardar a posição do valor menor que está em i + 1. +1 para mostrar de 1 a 10 em vez de mostrar 0 a 9.
                 }
 
-                if(vetor3[i] > valMaior){
-                    valMaior = vetor3[i];
-                    posMaior = i+1;
+                if(vetor3[i] > valMaior){ //"if" o valor de vetor3 na posição i for maior que o valor guardado na variavel
+                    valMaior = vetor3[i]; //guardar o novo valor
+                    posMaior = i+1; //guardar a posição do valor maior que está em i + 1. +1 para mostrar de 1 a 10 em vez de mostrar 0 a 9.
                 }
             }
 
-            printf("O maior valor e %d, e esta na posicao %d.\n", valMaior, posMaior);
+            printf("O maior valor e %d, e esta na posicao %d.\n", valMaior, posMaior); //mostrar valor maior e posição maior
             printf("O menor valor e %d, e esta na posicao %d. \n", valMenor, posMenor);
 
             printf("\n\nParte 3 - concluida. \n\n\n\n");
@@ -115,16 +115,16 @@ int main(){
             float media=0;
             int vetor4[6], positivas=0, somaMedia=0;
 
-            for(int i=0; i<6; i++){
+            for(int i=0; i<6; i++){ //"for" para ler e guardar os numeros inseridos no vetor
                 printf("Digite a notas: \n");
                 scanf("%d", &vetor4[i]);
 
-                    if(vetor4[i] >= 10){
-                        positivas++;
+                    if(vetor4[i] >= 10){ //"if" vetor4[i] for maior ou igual a 10
+                        positivas++; //adicionar 1 ao contador positivas
                     }
-                somaMedia = somaMedia + vetor4[i];
+                somaMedia = somaMedia + vetor4[i]; //somar os valores todos
             }
-            media = media + somaMedia / 6;
+            media = media + somaMedia / 6; //calcular a media
 
             printf("A media e de %.2f. E ha %d positivas.\n", media, positivas);
 
@@ -141,15 +141,15 @@ int main(){
 
             printf("Parte 5 - Contagem de pares e impares. \n\n");
 
-            for(int i=0;i<12;i++){
+            for(int i=0;i<12;i++){ //"for" para ler e guardar os numeros inseridos no vetor
                 printf("Insira os numeros: \n");
                 scanf("%d", &vetor5[i]);
                 
-                if(vetor5[i] % 2 == 0){
-                    par++;
+                if(vetor5[i] % 2 == 0){ //"if" restante de vetor5[i] % 2 for igual a 0
+                    par++; //contador par +1
                 }
-                else{
-                    impar++;
+                else{ //"else"
+                    impar++; //contador impar +1
                 }
             }
 
