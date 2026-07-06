@@ -27,7 +27,5 @@ int main() {
         }
     }
 
-    printf("\n"); //mudar de linha
-
     return 0;
 }
