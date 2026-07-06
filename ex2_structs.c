@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <string.h> //Necessário incluir para poder usar strings
 #include <ctype.h>
 
 struct Aluno{
