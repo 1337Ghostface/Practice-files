@@ -7,7 +7,7 @@ int main() {
 
     printf("Insere um numero decimal entre 0 e 127: "); //usando o vetor apenas ate 64, so permite que o maior numero inserido seja 127 porque o proximo valor e 128. e 128 nao cabe dentro de 127
 
-    if (scanf("%d", &decimal){ //ler numero inserido.
+    if  (scanf("%d", &decimal)){ //ler numero inserido.
         printf("Erro: tens de inserir um numero inteiro.\n"); //se o utilizador nao meter numero inteiro, da erro
         return 1; //termina o programa
     }
