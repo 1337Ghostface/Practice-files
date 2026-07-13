@@ -12,7 +12,7 @@ int main() {
         system("cls");  //comando para limpar terminal
 
         printf("\n\n===========================\n=== Descobre a Password ===\n===========================\n\n");
-        printf("O objetivo do jogo é descobrir qual é a password. Boa sorte!\n\n");
+        printf("O objetivo do jogo é descobrir qual é a password.\nBoa sorte!\n\n");
         
         printf("1 - Ver mensagens\n");
         printf("2 - Consultar agenda\n");
@@ -96,6 +96,11 @@ int main() {
 
                     if(pw != pass){
                         tentativas --;
+                        if (tentativas == 0) {
+                            printf("\nGame Over! Esgotou todas as tentativas.\n\n");
+                            system("pause");
+                            exit(0); //fecha a consola
+                        }
                         printf("Password errada!\n\n");
                         printf("Numero de tentativas restantes: %d\n\n", tentativas);
 
