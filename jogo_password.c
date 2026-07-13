@@ -98,6 +98,7 @@ int main() {
                         tentativas --;
                         if (tentativas == 0) {
                             printf("\nGame Over! Esgotou todas as tentativas.\n\n");
+                            printf("A password correta era %d.\n\n", pass);
                             system("pause");
                             exit(0); //fecha a consola
                         }
