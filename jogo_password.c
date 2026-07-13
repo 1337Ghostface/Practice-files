@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <windows.h> //necessario em conjunto com a primeira linha depois do main para mostrar acentos etc.
-#include <stdlib.h> //necessario para poder usar o comando de limpar ecra (esta na linha 11) --> system("cls");
+#include <stdlib.h> //necessario para poder usar o comando de limpar terminal (esta na linha 12) --> system("cls");
 
 int main() {
 
@@ -9,7 +9,7 @@ int main() {
     int pass=8474, opcao, tentativas=3, pw, voltar;
 
     do{
-        system("cls");  //comando para limpar ecra
+        system("cls");  //comando para limpar terminal
 
         printf("\n\n===========================\n=== Descobre a Password ===\n===========================\n\n");
         printf("O objetivo do jogo é descobrir qual é a password. Boa sorte!\n\n");
