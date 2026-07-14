@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <windows.h> //necessario em conjunto com a primeira linha depois do main para mostrar acentos etc.
-#include <stdlib.h> //necessario para poder usar o comando de limpar terminal (esta na linha 12) --> system("cls");
+#include <windows.h> //necessario em conjunto com a primeira linha depois do main para mostrar acentos etc (linha 7)
+#include <stdlib.h> //necessario para poder usar o comando de limpar terminal (linha 12) --> system("cls");
 
 int main() {
 
@@ -24,14 +24,15 @@ int main() {
         printf("Opção: ");
         scanf("%d", &opcao);
 
-        
-            if(opcao < 0 || opcao > 6){
+            if(opcao < 0 || opcao > 6){ //Se não escolheram uma opção válida
                 printf("\n\nOpção inválida!\n\n");
-                system("pause");
+                system("pause"); //Este comando faz com que o sistema espera até o usuário premir qualquer tecla
             }
-            else{
-                system("cls");  //comando para limpar ecra
+            else{ //Se a opção for válida
+                system("cls");  //Comando limpa o ecra e passa para a opção escolhida
+
             switch(opcao){
+
                 case 1:{
                     printf("\n\nMENSAGEM DE: UNKNOWN\n\n");
                     printf("O código continua igual.\n\n");
@@ -39,11 +40,13 @@ int main() {
                     printf("O segundo é metade do primeiro.\n");
                     printf("Os dois últimos estão escondidos noutros ficheiros.\n\n");
 
-                    system("pause"); //usado para pausar o programa ate o usuario premir uma tecla
+                    system("pause");
 
                     break;
                 }
+
                 case 2:{
+
                     printf("\n\nAGENDA\n\n");
                     printf("12/08 - Primeira ligação ao servidor\n");
                     printf("19/08 - Alteração da password\n");
@@ -53,7 +56,9 @@ int main() {
 
                     break;
                 }
+
                 case 3:{
+
                     printf("\n\nPASTA: FOTOGRAFIAS\n\n");
                     printf("foto_01.jpg\n");
                     printf("foto_02.jpg\n");
@@ -69,8 +74,10 @@ int main() {
 
                     break;
                 }
+
                 case 4:{
-                    printf("\n\nHISTORICO DO SISTEMA\n\n");
+
+                    printf("\n\nHISTÓRICO DO SISTEMA\n\n");
                     printf("Tentativa falhada às 21:10\n");
                     printf("Tentativa falhada às 21:14\n");
                     printf("Tentativa falhada às 21:18\n\n");
@@ -81,7 +88,9 @@ int main() {
 
                     break;
                 }
+
                 case 5:{
+
                     printf("\n\nFICHEIRO: ordem.txt\n\n");
                     printf("RECUPERAÇÃO PARCIAL\n\n");
                     printf("O número relacionado com as imagens aparece antes do número relacionado com o tempo.\n\n");
@@ -90,20 +99,23 @@ int main() {
 
                     break;
                 }
+
                 case 6:{
+
                     printf("\n\nIntroduza a password: \n\n");
                     scanf("%d", &pw);
 
-                    if(pw != pass){
-                        tentativas --;
-                        if (tentativas == 0) {
+                    if(pw != pass){ //Se a password inserida for diferente à password necessária para ganhar
+                        tentativas --; //Reduzir o número de tentativas
+                        if (tentativas == 0) { //Quando o número de tentativas for 0
                             printf("\nGame Over! Esgotou todas as tentativas.\n\n");
-                            printf("A password correta era %d.\n\n", pass);
+                            printf("A password correta é: Ajd(/S&a8=DJCaa.\n\n");
+                            printf("Estou a brincar. Não te vou dizer qual é a password :)\n\n");
                             system("pause");
-                            exit(0); //fecha a consola
+                            exit(0); //Fecha a consola
                         }
                         printf("Password errada!\n\n");
-                        printf("Numero de tentativas restantes: %d\n\n", tentativas);
+                        printf("Número de tentativas restantes: %d\n\n", tentativas); //Se ainda tiver tentativas, mostra quantas restantes tem.
 
                         system("pause");
                     }
@@ -115,7 +127,7 @@ int main() {
                 }
             }
         }
-    }while (opcao != 0);
+    }while (opcao != 0); //Continua a correr enquanto o utilizador não inserir 0. 0 é a opção para sair do programa.
     
     return 0;
 }
