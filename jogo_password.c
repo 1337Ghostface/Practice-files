@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <windows.h> //necessario em conjunto com a primeira linha depois do main para mostrar acentos etc (linha 7)
-#include <stdlib.h> //necessario para poder usar o comando de limpar terminal (linha 12) --> system("cls");
+#include <windows.h> //necessario depois do main para mostrar acentos etc --> SetConsoleOutputCP(65001);
+#include <stdlib.h> //necessario para poder usar o comando de limpar terminal --> system("cls");
 
 int main() {
 
@@ -11,7 +11,17 @@ int main() {
     do{
         system("cls");  //comando para limpar terminal
 
-        printf("\n\n===========================\n=== Descobre a Password ===\n===========================\n\n");
+        printf("       .-------.     \n");
+        printf("      /   .-.   \\   \n");
+        printf("     |   /   \\   |  \n");
+        printf("     |  |     |  |   \n");
+        printf("  .--'--'-----'--'--.\n");
+        printf("  | [+] Fechado [+] |\n");
+        printf("  |                 |\n");
+        printf("  | [_] [_] [_] [_] |\n");
+        printf("  |                 |\n");
+        printf("  '-----------------'\n\n");
+
         printf("O objetivo do jogo é descobrir qual é a password.\nBoa sorte!\n\n");
         
         printf("1 - Ver mensagens\n");
@@ -120,7 +130,17 @@ int main() {
                         system("pause");
                     }
                     else{
-                        printf("Password correta!\n\n");
+                        printf("\n\nPassword correta!\n\n");
+                                printf("       .-------.     \n");
+                                printf("      /   .-.___|        \n");
+                                printf("     |   /           \n");
+                                printf("     |  |            \n");
+                                printf("  .--'--'-----------.\n");
+                                printf("  | [+] Aberto! [+] |\n");
+                                printf("  |                 |\n");
+                                printf("  | [8] [4] [7] [4] |\n");
+                                printf("  |                 |\n");
+                                printf("  '-----------------'\n\n");
                         system("pause");                        
                     }
                     break;
