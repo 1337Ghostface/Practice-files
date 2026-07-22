@@ -14,8 +14,7 @@ int main()
     SetConsoleOutputCP(65001);
 
     struct produto p[5]; //definir a stuct como p[5]
-    float total = 0;
-    int maiorStock = 0;
+    float total = 0, maiorStock = 0;
 
     for (int i = 0; i < 5; i++) //for para guardar os códigos dos produtos
     {
@@ -48,7 +47,7 @@ int main()
 
     maiorStock = p[0].stock; //definir o maiorStock como o primeiro valor
 
-    for (int i = 0; i < 5; i++) //for para verificar se os valores seguintes são maiores, se sim, guardar como maiorStock
+    for (int i = 1; i < 5; i++) //for para verificar se os valores seguintes são maiores (por isso é que começo com i=1), se sim, guardar como maiorStock
     {
         if (maiorStock < p[i].stock)
         {
