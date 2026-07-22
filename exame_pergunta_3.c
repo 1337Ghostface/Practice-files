@@ -6,6 +6,7 @@ struct produto //Definir a struct produto
     int codigo; //Variaveis dentro da struct
     int quantidade;
     float preco;
+    float stock;
 };
 
 int main()
@@ -13,7 +14,7 @@ int main()
     SetConsoleOutputCP(65001);
 
     struct produto p[5]; //definir a stuct como p[5]
-    float stock[5], total = 0;
+    float total = 0;
     int maiorStock = 0;
 
     for (int i = 0; i < 5; i++) //for para guardar os códigos dos produtos
@@ -42,23 +43,23 @@ int main()
 
     for (int i = 0; i < 5; i++) //for para calcular o valor de stock
     {
-        stock[i] = p[i].preco * p[i].quantidade; //formula para calcular o stock
+        p[i].stock = p[i].preco * p[i].quantidade; //formula para calcular o stock
     }
 
-    maiorStock = stock[0]; //definir o maiorStock como o primeiro valor
+    maiorStock = p[0].stock; //definir o maiorStock como o primeiro valor
 
     for (int i = 0; i < 5; i++) //for para verificar se os valores seguintes são maiores, se sim, guardar como maiorStock
     {
-        if (maiorStock < stock[i])
+        if (maiorStock < p[i].stock)
         {
-            maiorStock = stock[i];
+            maiorStock = p[i].stock;
         }
-        total += stock[i]; //adicionar todos os valores do stock para o total
+        total += p[i].stock; //adicionar todos os valores do stock para o total
     }
 
     for (int i = 0; i < 5; i++) //for para mostrar o stock de cada produto
     {
-        printf("O stock do produto %d, é de %.2f\n", p[i].codigo, stock[i]);
+        printf("O stock do produto %d, é de %.2f\n", p[i].codigo, p[i].stock);
     }
 
     printf("\n\nO valor total do stock é de %.2f", total);
