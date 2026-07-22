@@ -39,18 +39,24 @@ int main()
 
     printf("\n\n");
 
-    for (int i = 0; i < n; i++)
-    {
-        printf("Digite a nota do aluno nº %d: ", a[i].numero);
+for (int i = 0; i < n; i++)
+{
+    do {
+        printf("Digite a nota do aluno nº %d (0 a 20): ", a[i].numero);
         scanf("%d", &a[i].nota);
 
-        if (a[i].nota >= 10)
-        {
-            aprovados++;
+        if (a[i].nota < 0 || a[i].nota > 20) {
+            printf("Nota inválida! Por favor, digite um valor entre 0 e 20.\n");
         }
+    } while (a[i].nota < 0 || a[i].nota > 20);        
 
-        mediaNotas += a[i].nota;
+    if (a[i].nota >= 10)
+    {
+        aprovados++;
     }
+
+    mediaNotas += a[i].nota;
+}
 
     printf("\n\n");
 
@@ -74,7 +80,8 @@ int main()
 
     printf("\n\n");
 
-    printf("A média das notas é de %.2f", mediaNotas);
+    printf("%d alunos estão aprovados.\n", aprovados);
+    printf("A média das notas é de %.2f\n", mediaNotas);
 
     return 0;
 }
